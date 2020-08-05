@@ -84,10 +84,10 @@ jobs:
       run: cd openwrt && git clone https://github.com/rufengsuixing/luci-app-adguardhome package/lean/adguardhome
 
     - name: Install node-request
-      run: cd openwrt && git clone https://github.com/jerrykuku/node-request.git package/lean/
+      run: cd openwrt && git clone https://github.com/jerrykuku/node-request.git package/lean/node-request
 
     - name: Install jd-dailybonus
-      run: cd openwrt && git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/
+      run: cd openwrt && git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
 
     - name: Load custom configuration
       run: |
