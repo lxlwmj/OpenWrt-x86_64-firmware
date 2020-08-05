@@ -19,8 +19,8 @@ on:
       - main
     paths:
       - '.config'
-#  schedule:
-#    - cron: 0 8 * * 5
+   schedule:
+     - cron: 0 7 * * 3
 #  watch:
 #    types: started
 
@@ -79,6 +79,15 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
+
+    - name: Install adguardhome
+      run: cd openwrt && git clone https://github.com/rufengsuixing/luci-app-adguardhome package/lean/adguardhome
+
+    - name: Install node-request
+      run: cd openwrt && git clone https://github.com/jerrykuku/node-request.git package/lean/
+
+    - name: Install jd-dailybonus
+      run: cd openwrt && git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/
 
     - name: Load custom configuration
       run: |
